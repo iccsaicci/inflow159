@@ -99,19 +99,19 @@
 	      </PARAM>
 	    </FILTER>
 
-        <FILTER TYPE="HistoryPlane">
+        <FILTER TYPE="HistoryPoints">
               <PARAM NAME="OutputFile">History_inlet</PARAM> <PARAM NAME="OutputFrequency">5000</PARAM> <PARAM NAME="Plane">
                 100, 100, (36,44.82,0), (36,44.82,1), (36,43.56,1), (36,43.56,0)
 	      </PARAM>
 	    </FILTER>
 
-        <FILTER TYPE="HistoryPlane">
+        <FILTER TYPE="HistoryPoints">
               <PARAM NAME="OutputFile">History_outlet</PARAM> <PARAM NAME="OutputFrequency">5000</PARAM> <PARAM NAME="Plane">
                 100, 100, (36,42.27,1), (36,41.01,1), (36,41.01,0), (36,42.27,0)
 	      </PARAM>
 	    </FILTER>
 
-        <FILTER TYPE="HistoryPlane">
+        <FILTER TYPE="HistoryPoints">
               <PARAM NAME="OutputFile">History_bend</PARAM> <PARAM NAME="OutputFrequency">5000</PARAM> <PARAM NAME="Plane">
                 100, 100, (43.005,42.915,1), (44.265,42.915,1), (44.265,42.915,0), (43.005,42.915,0)
 	      </PARAM>
