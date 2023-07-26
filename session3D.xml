@@ -33,7 +33,7 @@
 
     <PARAMETERS>
         <P> TimeStep      =    1.0e-3                                       </P> <!-- Time step -->   
-        <P> NumSteps      =    20000                                        </P> <!-- Number of step -->
+        <P> NumSteps      =    10000                                        </P> <!-- Number of step -->
         <P> IO_CheckSteps =    1000                                        </P> <!-- Number of step to write the intermediate results -->
         <P> IO_InfoSteps  =    100                                        </P> <!-- Number of step to print information -->
         <P> IO_CFLSteps   =    100                                        </P> <!-- Number of step to print CFL number  -->
@@ -85,9 +85,7 @@
         <!-- Specify the initial condition -->
         <FUNCTION NAME="InitialConditions">
         <F VAR="u" FILE="inflow.fld" />
-        <E VAR="v" VALUE="V0" />
-        <E VAR="w" VALUE="W0" />
-        <E VAR="p" VALUE="0.0" />     
+        <F VAR="v,w,p" FILE="new3D10_10.rst" />     
         </FUNCTION>
     </CONDITIONS>
     
@@ -100,19 +98,19 @@
 	    </FILTER>
 
         <FILTER TYPE="HistoryPoints">
-              <PARAM NAME="OutputFile">History_inlet</PARAM> <PARAM NAME="OutputFrequency">5000</PARAM> <PARAM NAME="plane">
+              <PARAM NAME="OutputFile">History_inlet</PARAM> <PARAM NAME="OutputFrequency">1000</PARAM> <PARAM NAME="plane">
                 100, 100, 36,44.82,0, 36,44.82,1, 36,43.56,1, 36,43.56,0
 	      </PARAM>
 	    </FILTER>
 
         <FILTER TYPE="HistoryPoints">
-              <PARAM NAME="OutputFile">History_outlet</PARAM> <PARAM NAME="OutputFrequency">5000</PARAM> <PARAM NAME="plane">
+              <PARAM NAME="OutputFile">History_outlet</PARAM> <PARAM NAME="OutputFrequency">1000</PARAM> <PARAM NAME="plane">
                 100, 100, 36,42.27,1, 36,41.01,1, 36,41.01,0, 36,42.27,0
 	      </PARAM>
 	    </FILTER>
 
         <FILTER TYPE="HistoryPoints">
-              <PARAM NAME="OutputFile">History_bend</PARAM> <PARAM NAME="OutputFrequency">5000</PARAM> <PARAM NAME="plane">
+              <PARAM NAME="OutputFile">History_bend</PARAM> <PARAM NAME="OutputFrequency">1000</PARAM> <PARAM NAME="plane">
                 100, 100, 43.005,42.915,1, 44.265,42.915,1, 44.265,42.915,0, 43.005,42.915,0
 	      </PARAM>
 	    </FILTER>
